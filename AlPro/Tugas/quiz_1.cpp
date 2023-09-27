@@ -37,7 +37,7 @@ int main () {
       }
       case 3: {
         cout << "Menghitung Bilangan Maksimum" << endl;
-        int bil_1, bil_2, bil_3, bil_4;
+        double bil_1, bil_2, bil_3, bil_4;
 
         cout << "Masukkan bilangan pertama >> "; cin >> bil_1;
         cout << "Masukkan bilangan kedua >> "; cin >> bil_2;
@@ -45,13 +45,13 @@ int main () {
         cout << "Masukkan bilangan keempat >> "; cin >> bil_4;
 
         if ((bil_1 > bil_2) && (bil_1 > bil_3) && (bil_1 > bil_4)) {
-          cout << "Nilai maksimum ada di bilangan pertama: " << bil_1 << endl;
+          cout << "\nNilai maksimum ada di bilangan pertama: " << bil_1 << endl;
         } if ((bil_2 > bil_1) && (bil_2 > bil_3) && (bil_2 > bil_4)) {
-          cout << "Nilai maksimum ada di bilangan kedua: " << bil_2 << endl;
+          cout << "\nNilai maksimum ada di bilangan kedua: " << bil_2 << endl;
         } if ((bil_3 > bil_1) && (bil_3 > bil_2) && (bil_3 > bil_4)) {
-          cout << "Nilai maksimum ada di bilangan ketiga: " << bil_3 << endl;
+          cout << "\nNilai maksimum ada di bilangan ketiga: " << bil_3 << endl;
         } if ((bil_4 > bil_1) && (bil_4 > bil_2) && (bil_4 > bil_3)) {
-          cout << "Nilai maksimum ada di bilangan keempat: " << bil_4 << endl;
+          cout << "\nNilai maksimum ada di bilangan keempat: " << bil_4 << endl;
         }
 
         break;
@@ -70,6 +70,11 @@ int main () {
         if (suhu <= 35 && suhu > 30) cout << "\nSuhu saat ini PANAS, " << suhu << "'C" << endl;
         if (suhu <= 40 && suhu > 35) cout << "\nSuhu saat ini SANGAT PANAS, " << suhu << "'C" << endl;
         if (suhu > 40) cout << "\nSuhu tidak terdefinisi" << endl;
+
+        break;
+      }
+      case 5: {
+        cout << "\nTerima kasih telah menggunakan program kami.\n" << endl;
 
         break;
       }
