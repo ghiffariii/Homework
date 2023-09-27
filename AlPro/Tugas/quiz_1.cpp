@@ -6,7 +6,7 @@ int main () {
   int pilihan;
 
   do {
-    cout << "################### MAIN MENU ###################" << endl;
+    cout << "\n################### MAIN MENU ###################" << endl;
     cout << "-------------------------------------------------" << endl;
     cout << "1. Menghitung jarak titik koordinat cartecius" << endl;
     cout << "2. Menghitung perkalian deret bilangan prima" << endl;
@@ -57,10 +57,24 @@ int main () {
         break;
       }
       case 4: {
-        
+        double suhu;
+
+        cout << "    Mengukur Keadaan Suhu   " << endl;
+        cout << "----------------------------" << endl;
+        cout << "Masukkan suhu >> "; cin >> suhu;
+
+        if (suhu < 15) cout << "\nSuhu saat ini SANGAT DINGIN, " << suhu << "'C" << endl;
+        if (suhu <= 20 && suhu > 15) cout << "\nSuhu saat ini DINGIN, " << suhu << "'C" << endl;
+        if (suhu <= 25 && suhu > 20) cout << "\nSuhu saat ini SEJUK, " << suhu << "'C" << endl;
+        if (suhu <= 30 && suhu > 25) cout << "\nSuhu saat ini HANGAT, " << suhu << "'C" << endl;
+        if (suhu <= 35 && suhu > 30) cout << "\nSuhu saat ini PANAS, " << suhu << "'C" << endl;
+        if (suhu <= 40 && suhu > 35) cout << "\nSuhu saat ini SANGAT PANAS, " << suhu << "'C" << endl;
+        if (suhu > 40) cout << "\nSuhu tidak terdefinisi" << endl;
+
+        break;
       }
       default: {
-        cout << "Pilihan tidak valid. Silahkan coba lagi.\n";
+        cout << "\nPilihan tidak valid. Silahkan coba lagi.\n";
         break;
       }
     }
