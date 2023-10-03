@@ -18,9 +18,11 @@ int main () {
 
     switch (pilihan ) {
       case 1: {
+        cout << "\n    Menghitung Jarak Koordinat Cartesius   " << endl;
+        cout << "-------------------------------------------" << endl;
         double x1, x2, y1, y2;
 
-        cout << "Masukkan koordinat titik pertama x1 >> "; cin >> x1;
+        cout << "\nMasukkan koordinat titik pertama x1 >> "; cin >> x1;
         cout << "y1 >> "; cin >> y1;
 
         cout << "Masukkan koordinat titik pertama x2 >> "; cin >> x2;
@@ -33,10 +35,41 @@ int main () {
       break;
       }
       case 2: {
-        cout << "Belum ada" << endl;
+        cout << "\n    Menghitung Perkalian Deret Prima   " << endl;
+        cout << "---------------------------------------" << endl;
+
+        int maxDeret;
+        int hasilKali = 1;
+        int hitung = 0;
+
+        cout << "Maksimal deret bilangan prima? "; cin >> maxDeret;
+
+        cout << "Deret bilangan prima: " << endl;
+        for(int a = 2; a <= maxDeret; ++a) {
+          int iniPrima = 1;
+          for(int b = 2; b * b <= a; ++b) {
+            if(a % b == 0) {
+              iniPrima = 0;
+              break;
+            }
+          }
+          if(iniPrima) {
+            if(hitung > 0) {
+              cout << " x ";
+            }
+            cout << a;
+            hasilKali *= a;
+            ++hitung;
+          }
+          cout << " = " << hasilKali << "\n" << endl;
+          break;
+        }
+        cout << "\n" << endl;
+        break; 
       }
       case 3: {
-        cout << "Menghitung Bilangan Maksimum" << endl;
+        cout << "\n    Menghitung Nilai Maksimum   " << endl;
+        cout << "--------------------------------" << endl;
         double bil_1, bil_2, bil_3, bil_4;
 
         cout << "Masukkan bilangan pertama >> "; cin >> bil_1;
@@ -59,7 +92,7 @@ int main () {
       case 4: {
         double suhu;
 
-        cout << "    Mengukur Keadaan Suhu   " << endl;
+        cout << "\n    Mengukur Keadaan Suhu   " << endl;
         cout << "----------------------------" << endl;
         cout << "Masukkan suhu >> "; cin >> suhu;
 
