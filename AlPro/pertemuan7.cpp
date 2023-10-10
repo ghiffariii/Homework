@@ -170,6 +170,10 @@ void menu7() {
   }
   cout << endl;
 }
+void menu8() {
+  cout << "Terima Kasih Telah Menggunakan Program ini" << endl;
+  exit(0);
+}
   
 int main() {
   int i = 1, menu;
@@ -182,6 +186,7 @@ int main() {
     cout << "5. Sorting Dinamis Huruf" << endl;
     cout << "6. Sorting Dinamis Huruf Terbalik" << endl;
     cout << "7. Pecah array berdasarkan input sisip" << endl;
+    cout << "8. EXIT" << endl;
     cout << "\nSilahkan pilih menu: "; cin >> menu;
 
     if(menu == 1) {
@@ -196,8 +201,10 @@ int main() {
       menu5();
     } else if(menu == 6) {
       menu6();
-    } else if (menu == 7) {
+    } else if(menu == 7) {
       menu7();
+    } else if(menu == 8) {
+      menu8();
     } else {
       cout << "Menu tidak ada" << endl;
     }
