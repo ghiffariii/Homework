@@ -74,15 +74,114 @@ void menu3() {
   }
   cout << "\n" << endl;
 }
+void menu4() {
+  int n;
+  cout << "Masukkan jumlah data: "; cin >> n;
+  int dataGaUrut[n];
 
+  for(int i = 0; i < n; i++) {
+    cout << "Masukkan data " << i + 1 << ": ";
+    cin >> dataGaUrut[i];
+  }
+
+  for(int i = 0; i < n; i++) {
+    for(int j = 0; j < n - i - 1; j++) {
+      if(dataGaUrut[j] < dataGaUrut[j + 1]) {
+        int temp = dataGaUrut[j];
+        dataGaUrut[j] = dataGaUrut[j + 1];
+        dataGaUrut[j + 1] = temp;
+      }
+    }
+  }
+  for(int i = 0; i < n; i++) {
+    cout << dataGaUrut[i] << " ";
+  }
+  cout << "\n" << endl;
+}
+void menu5() {
+  int n;
+  cout << "Masukkan jumlah data: "; cin >> n;
+  char dataGaUrut[n];
+
+  for(int i = 0; i < n; i++) {
+    cout << "Masukkan huruf ke-" << i + 1 << ": ";
+    cin >> dataGaUrut[i];
+  }
+
+  for(int i = 0; i < n; i++) {
+    for(int j = 0; j < n - i - 1; j++) {
+      if(dataGaUrut[j] > dataGaUrut[j + 1]) {
+        int temp = dataGaUrut[j];
+        dataGaUrut[j] = dataGaUrut[j + 1];
+        dataGaUrut[j + 1] = temp;
+      }
+    }
+  }
+  for(int i = 0; i < n; i++) {
+    cout << dataGaUrut[i] << " ";
+  }
+  cout << "\n" << endl;
+}
+void menu6() {
+  int n;
+  cout << "Masukkan jumlah data: "; cin >> n;
+  char dataGaUrut[n];
+
+  for(int i = 0; i < n; i++) {
+    cout << "Masukkan huruf ke-" << i + 1 << ": ";
+    cin >> dataGaUrut[i];
+  }
+
+  for(int i = 0; i < n; i++) {
+    for(int j = 0; j < n - i - 1; j++) {
+      if(dataGaUrut[j] < dataGaUrut[j + 1]) {
+        int temp = dataGaUrut[j];
+        dataGaUrut[j] = dataGaUrut[j + 1];
+        dataGaUrut[j + 1] = temp;
+      }
+    }
+  }
+  for(int i = 0; i < n; i++) {
+    cout << dataGaUrut[i] << " ";
+  }
+  cout << "\n" << endl;
+}
+void menu7() {
+  int n, sisip;
+
+  cout << "Masukkan panjang array: "; cin >> n;
+
+  int array[n];
+
+  for (int i = 0; i < n; i++) {
+    cout << "Data ke-" << i + 1 << ": "; cin >> array[i];
+  }
+
+  cout << "Masukkan nilai sisip: "; cin >> sisip;
+
+  cout << "Array 1: ";
+  for (int i = 0; i < sisip; i++) {
+    cout << array[i] << " ";
+  }
+
+  cout << "\nArray 2: ";
+  for (int i = sisip; i < n; i++) {
+    cout << array[i] << " ";
+  }
+  cout << endl;
+}
+  
 int main() {
   int i = 1, menu;
 
   do {
-    cout << "1. Menghitung rumus pitaghoras" << endl;
+    cout << "\n1. Menghitung rumus pitaghoras" << endl;
     cout << "2. Sorting Statis" << endl;
     cout << "3. Sorting Dinamis" << endl;
     cout << "4. Sorting Dinamis Terbalik" << endl;
+    cout << "5. Sorting Dinamis Huruf" << endl;
+    cout << "6. Sorting Dinamis Huruf Terbalik" << endl;
+    cout << "7. Pecah array berdasarkan input sisip" << endl;
     cout << "\nSilahkan pilih menu: "; cin >> menu;
 
     if(menu == 1) {
@@ -91,6 +190,14 @@ int main() {
       menu2();
     } else if(menu == 3) {
       menu3();
+    } else if(menu == 4) {
+      menu4();
+    } else if(menu == 5) {
+      menu5();
+    } else if(menu == 6) {
+      menu6();
+    } else if (menu == 7) {
+      menu7();
     } else {
       cout << "Menu tidak ada" << endl;
     }
