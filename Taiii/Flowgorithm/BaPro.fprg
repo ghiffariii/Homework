@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hrghi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 10:43:20 AM"/>
+        <attribute name="created" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0wOS0yMjsxMDozMDoyMCBBTTsyNjYx"/>
+        <attribute name="edited" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0wOS0yMjsxMDo0MzoyMCBBTTsxOzI3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilai" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input nilai mata kuliah: &quot;" newline="True"/>
+            <input variable="nilai"/>
+            <if expression="nilai &gt;= 85 &amp;&amp; nilai &lt;= 100">
+                <then>
+                    <output expression="&quot;LULUS&quot;" newline="True"/>
+                    <output expression="&quot;GRADE A&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="nilai &gt;= 75 &amp;&amp; nilai &lt; 85">
+                        <then>
+                            <output expression="&quot;LULUS&quot;" newline="True"/>
+                            <output expression="&quot;GRADE B&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="nilai &gt;= 75 &amp;&amp; nilai &lt; 85">
+                                <then>
+                                    <output expression="&quot;LULUS&quot;" newline="True"/>
+                                    <output expression="&quot;GRADE B&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="nilai &gt;= 60 &amp;&amp; nilai &lt; 75">
+                                        <then>
+                                            <output expression="&quot;LULUS&quot;" newline="True"/>
+                                            <output expression="&quot;GRADE C&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="nilai &gt;= 45 &amp;&amp; nilai &lt; 60">
+                                                <then>
+                                                    <output expression="&quot;GAGAL&quot;" newline="True"/>
+                                                    <output expression="&quot;GRADE D&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="nilai &gt;= 0 &amp;&amp; nilai &lt; 45">
+                                                        <then>
+                                                            <output expression="&quot;GAGAL&quot;" newline="True"/>
+                                                            <output expression="&quot;GRADE E&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="nilai &gt; 100 &amp;&amp; nilai &lt; 0">
+                                                                <then>
+                                                                    <output expression="&quot;Nilai yang dimasukan tidak valid&quot;" newline="True"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

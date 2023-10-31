@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hrghi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-23 03:04:35 PM"/>
+        <attribute name="created" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0xMC0yMzswMjo0NToyNiBQTTsyNjgy"/>
+        <attribute name="edited" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0xMC0yMzswMzowNDozNSBQTTsyOzI3ODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, p, q" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan X dan Y: &quot;" newline="True"/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <assign variable="p" expression="x + y"/>
+            <if expression="p &gt; 0">
+                <then>
+                    <assign variable="q" expression="x * y"/>
+                    <output expression="p" newline="True"/>
+                    <output expression="q" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="q" expression="x/y"/>
+                    <output expression="p" newline="True"/>
+                    <output expression="q" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hrghi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 08:30:06 PM"/>
+        <attribute name="created" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0wOS0xNDswNzoyMTo1NyBQTTsyNjkz"/>
+        <attribute name="edited" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0wOS0xNDswODozMDowNiBQTTs1OzI4MDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil, total, rerata" type="Integer" array="False" size=""/>
+            <assign variable="bil" expression="1"/>
+            <assign variable="total" expression="0"/>
+            <while expression="bil &lt;= 100">
+                <assign variable="total" expression="total + bil"/>
+                <output expression="bil" newline="True"/>
+                <assign variable="bil" expression="bil + 2"/>
+            </while>
+            <output expression="total" newline="True"/>
+            <assign variable="rerata" expression="total/50"/>
+            <output expression="rerata" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

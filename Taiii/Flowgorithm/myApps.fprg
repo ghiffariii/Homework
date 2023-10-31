@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hrghi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-25 01:01:57 AM"/>
+        <attribute name="created" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0xMC0yNTsxMjozNzoyMyBBTTsyNjY4"/>
+        <attribute name="edited" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0xMC0yNTswMTowMTo1NyBBTTs3OzI3Nzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="login, signup" type="Integer" array="False" size=""/>
+            <declare name="username, password" type="String" array="False" size=""/>
+            <output expression="&quot;Login (1/0):&quot;" newline="True"/>
+            <input variable="login"/>
+            <if expression="login = 1">
+                <then>
+                    <call expression="login"/>
+                </then>
+                <else>
+                    <output expression="&quot;Masukkan username:&quot;" newline="True"/>
+                    <input variable="username"/>
+                    <output expression="&quot;Masukkan password:&quot;" newline="True"/>
+                    <input variable="password"/>
+                </else>
+            </if>
+            <output expression="&quot;Selamat datang&quot;" newline="True"/>
+            <output expression="username" newline="True"/>
+        </body>
+    </function>
+    <function name="login" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="username, password" type="String" array="True" size="50"/>
+            <declare name="founds" type="Integer" array="False" size=""/>
+            <assign variable="founds" expression="0"/>
+            <output expression="&quot;Masukkan username: &quot;" newline="False"/>
+            <input variable="username"/>
+            <output expression="&quot;Masukkan password: &quot;" newline="False"/>
+            <input variable="password"/>
+            <open expression="username" mode="read"/>
+            <open expression="password" mode="read"/>
+            <while expression="fscanf(username, password) == 2">
+                <if expression="strcmp(username) == 0 &amp;&amp; strcmp(password) == 0">
+                    <then/>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

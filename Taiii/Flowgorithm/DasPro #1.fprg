@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hrghi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 07:56:45 PM"/>
+        <attribute name="created" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0wOS0xNDswNzoyMTo1NyBQTTsyNjkz"/>
+        <attribute name="edited" value="aHJnaGk7TE9SRU1JUFNVTV87MjAyMy0wOS0xNDswNzo1Njo0NSBQTTsxOzI4MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil" type="Integer" array="False" size=""/>
+            <assign variable="bil" expression="1"/>
+            <while expression="bil &lt;= 100">
+                <output expression="bil" newline="True"/>
+                <assign variable="bil" expression="bil + 2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
