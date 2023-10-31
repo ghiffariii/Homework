@@ -1,0 +1,18 @@
+# Nama file sumber dan target
+SRC = C:\Dev\kuliah\semester_01\AlPro\Tugas\uts_bGanjil.cpp
+TARGET = C:\Dev\kuliah\semester_01\AlPro\Tugas\uts_bGanjil.exe
+
+# Perintah kompilasi dan opsi
+CC = g++
+
+# Aturan untuk membuat target
+$(TARGET): $(SRC)
+	$(CC) $(SRC) -o $(TARGET)
+
+# Aturan clean untuk menghapus file target
+clean:
+	rm -f $(TARGET)
+
+# Aturan run untuk menjalankan program
+run: $(TARGET)
+		$(TARGET)
