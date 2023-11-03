@@ -2,141 +2,163 @@
 
 using namespace std;
 
-int main (int argc, char *argv[]) {
-    void percabangan_1 (); {
-        int nilai;
+void percabangan_1() {
+  int nilai;
 
-        cout << "Masukkan nilai: "; cin >> nilai;
+  cout << "Masukkan nilai: "; cin >> nilai;
 
-        if (nilai >= 90) {
-            cout << "Nilai angka: A" << endl;
-        } if (nilai < 90 && nilai > 60) {
-            cout << "Nilai angka: B" << endl;
-        } else {
-            cout << "Maaf anda tidak lulus" << endl;
-        }
-    }
-    void percabangan_2 (); {
-        int nilai;
+  if (nilai >= 90) {
+    cout << "Nilai angka: A" << endl;
+  } if (nilai < 90 && nilai > 60) {
+    cout << "Nilai angka: B" << endl;
+  } else {
+    cout << "Maaf anda tidak lulus" << endl;
+  }
+}
 
-        cout << "Masukkan nilai: "; cin >> nilai;
+void percabangan_2() {
+  int nilai;
 
-        if (nilai%2 == 0) {
-            cout << "Nilai " << nilai << " adalah nilai Genap" << endl;
-        } else {
-            cout << "Nilai " << nilai << " adalah nilai Ganjil" << endl;
-        }
-    }
-    void percabangan_3 (); {
-        int gol;
-        cout << "Masukkan gol: "; cin >> gol;
+  cout << "Masukkan nilai: "; cin >> nilai;
 
-        switch (gol) {
-            case 1: cout << "Gaji = 100" << endl;
-            break;
+  if (nilai%2 == 0) {
+    cout << "Nilai " << nilai << " adalah nilai Genap" << endl;
+  } else {
+    cout << "Nilai " << nilai << " adalah nilai Ganjil" << endl;
+  }
+}
 
-            case 2: cout << "Gaji = 200" << endl;
-            break;
+void percabangan_3() {
+  int gol;
+  cout << "Masukkan gol: "; cin >> gol;
 
-            case 3: cout << "Gaji = 300" << endl;
-            break;
+  switch (gol) {
+    case 1: cout << "Gaji = 100" << endl;
+    break;
 
-            case 4: cout << "Gaji = 400" << endl;
-            break;
-        }
-    }
-    void percabangan_4 (); {
-        double a, b, c, max;
+    case 2: cout << "Gaji = 200" << endl;
+    break;
 
-        cout << "Masukkan 3 buah bilangan: "; cin >> a >> b >> c;
+    case 3: cout << "Gaji = 300" << endl;
+    break;
 
-        if (a > b)
-        if (a > c) max = b; 
-        else max = c;
+    case 4: cout << "Gaji = 400" << endl;
+    break;
+  }
+}
 
-        else if (b > c) max = b;
-        else max = c;
+void percabangan_4() {
+  double a, b, c, max;
 
-        cout << "Nilai maksimum adalah: " << max << endl;
-    }
-    void percabangan_5 (); {
-        double a, b, c, min;
+  cout << "Masukkan 3 buah bilangan: "; cin >> a >> b >> c;
 
-        cout << "Masukkan 3 buah bilangan: "; cin >> a >> b >> c;
+  if (a > b)
+  if (a > c) max = b; 
+  else max = c;
 
-        if (a < b)
-        if (a < c) min = b; 
-        else min = c;
+  else if (b > c) max = b;
+  else max = c;
 
-        else if (b < c) min = b;
-        else min = c;
+  cout << "Nilai maksimum adalah: " << max << endl;
+}
 
-        cout << "Nilai minimum adalah: " << min << endl;
-    }
-    void percabangan_6 (); {
-        int a, b, c;
+void percabangan_5() {
+  double a, b, c, min;
 
-        cout << "Masukkan tiga buah bilangan: "; cin >> a >> b >> c;
-        cout << "Nilai tertinggi adalah: ";
+  cout << "Masukkan 3 buah bilangan: "; cin >> a >> b >> c;
 
-        if((a >= b) && (a >= c)) cout << a << endl;
-        if((b >= a) && (b >= c)) cout << b << endl;
-        if((c >= a) && (c >= b)) cout << c << endl;
-    }
-    void percabangan_7 (); {
-        char jawab;
+  if (a < b)
+  if (a < c) min = b; 
+  else min = c;
 
-        cout << "Yakin? (y/n) "; cin >> jawab;
+  else if (b < c) min = b;
+  else min = c;
 
-        if (jawab == 'y' || jawab == 'Y')
-            cout << "OK, anda yakin" << endl;
-        else
-            cout << "Maaf, anda tidak yakin.." << endl;
+  cout << "Nilai minimum adalah: " << min << endl;
+}
 
-        return 0;
-    }
-    void percabangan_8 (); {
-        string jawab;
+void percabangan_6() {
+  int a, b, c;
 
-        cout << "Yakin? (y/n) "; cin >> jawab;
+  cout << "Masukkan tiga buah bilangan: "; cin >> a >> b >> c;
+  cout << "Nilai tertinggi adalah: ";
 
-        if (jawab == "yakin" || jawab == "Yakin")
-            cout << "OK, anda yakin" << endl;
-        else
-            cout << "Maaf, anda tidak yakin.." << endl;
-    }
-    void percabangan_9 (); {
-        char status;
-        int grade;
+  if((a >= b) && (a >= c)) cout << a << endl;
+  if((b >= a) && (b >= c)) cout << b << endl;
+  if((c >= a) && (c >= b)) cout << c << endl;
+}
 
-        cout << "Masukkan Grade: ";  cin >> grade;
+void percabangan_7() {
+  char jawab;
 
-        status = (grade >= 60)? 'L' : 'G';
+  cout << "Yakin? (y/n) "; cin >> jawab;
 
-        cout << status << endl;
-    }
-    void percabangan_10 (); {
-        string status;
-        int grade;
+  if (jawab == 'y' || jawab == 'Y')
+    cout << "OK, anda yakin" << endl;
+  else
+    cout << "Maaf, anda tidak yakin.." << endl;
+}
 
-        cout << "Masukkan Grade: ";  cin >> grade;
+void percabangan_8() {
+  string jawab;
 
-        status = (grade >= 60)? "Lulus" : "Gak lulus";
+  cout << "Yakin? (y/n) "; cin >> jawab;
 
-        cout << status << endl;
-    }
-    void percabangan_11 (); {
-        int m = 26, n = 82;
-        int min = m < n? m : n;
+  if (jawab == "yakin" || jawab == "Yakin")
+    cout << "OK, anda yakin" << endl;
+  else
+    cout << "Maaf, anda tidak yakin.." << endl;
+}
 
-        cout << "Bilangan terkecil adalah " << min << endl;
-    }
-    void percabangan_12 (); {
-        int m = 26, n = 82;
-        int max = m > n? m : n;
+void percabangan_9() {
+  char status;
+  int grade;
 
-        cout << "Bilangan tebesar adalah " << max << endl;
-    }
+  cout << "Masukkan Grade: ";  cin >> grade;
 
-    return 0;
+  status = (grade >= 60)? 'L' : 'G';
+
+  cout << status << endl;
+}
+
+void percabangan_10() {
+  string status;
+  int grade;
+
+  cout << "Masukkan Grade: ";  cin >> grade;
+
+  status = (grade >= 60)? "Lulus" : "Gak lulus";
+
+  cout << status << endl;
+}
+
+void percabangan_11() {
+  int m = 26, n = 82;
+  int min = m < n? m : n;
+
+  cout << "Bilangan terkecil adalah " << min << endl;
+}
+
+void percabangan_12() {
+  int m = 26, n = 82;
+  int max = m > n? m : n;
+
+  cout << "Bilangan tebesar adalah " << max << endl;
+}
+
+int main(int argc, char *argv[]) {
+  // percabangan_1();
+  // percabangan_2();
+  // percabangan_3();
+  // percabangan_4();
+  // percabangan_5();
+  // percabangan_6();
+  // percabangan_7();
+  // percabangan_8();
+  // percabangan_9();
+  // percabangan_10();
+  // percabangan_11();
+  // percabangan_12();
+
+  return 0;
 }
