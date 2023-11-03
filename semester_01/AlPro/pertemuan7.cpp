@@ -12,6 +12,7 @@ float rumus1(int a, int b) {
 
   return hasil;
 }
+
 float rumus2(int a, int b, int c) {
   float hasil;
 
@@ -19,6 +20,7 @@ float rumus2(int a, int b, int c) {
 
   return sqrt(hasil);
 }
+
 void menu1() {
   int a, b, c;
   cout << "Masukkan nilai a: "; cin >> a;
@@ -33,6 +35,7 @@ void menu1() {
   cout << endl;
   rumus1(a, b);
 }
+
 void menu2() {
   int n = 6;
   int dataBelumTerurut[6] = {1, 5, 3, 2, 5, 4};
@@ -50,6 +53,7 @@ void menu2() {
     cout << dataBelumTerurut[i] << " ";
   }
 }
+
 void menu3() {
   int n;
   cout << "Masukkan jumlah data: "; cin >> n;
@@ -74,6 +78,7 @@ void menu3() {
   }
   cout << "\n" << endl;
 }
+
 void menu4() {
   int n;
   cout << "Masukkan jumlah data: "; cin >> n;
@@ -98,6 +103,7 @@ void menu4() {
   }
   cout << "\n" << endl;
 }
+
 void menu5() {
   int n;
   cout << "Masukkan jumlah data: "; cin >> n;
@@ -117,11 +123,13 @@ void menu5() {
       }
     }
   }
+
   for(int i = 0; i < n; i++) {
     cout << dataGaUrut[i] << " ";
   }
   cout << "\n" << endl;
 }
+
 void menu6() {
   int n;
   cout << "Masukkan jumlah data: "; cin >> n;
@@ -146,6 +154,7 @@ void menu6() {
   }
   cout << "\n" << endl;
 }
+
 void menu7() {
   int n, sisip;
 
@@ -170,6 +179,7 @@ void menu7() {
   }
   cout << endl;
 }
+
 void menu8() {
   cout << "Terima Kasih Telah Menggunakan Program ini" << endl;
   exit(0);
