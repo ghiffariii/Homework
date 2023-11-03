@@ -43,6 +43,7 @@ void array3() {
 
 void array4() {
   int data[10];
+  
   for(int i=0; i<10; i++) {
     data[i]= rand();
     cout<<"data ke "<<i+1<< " adalah "<< data[i]<<endl;
