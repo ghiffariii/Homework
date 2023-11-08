@@ -86,25 +86,27 @@ void hitungKarakterSama() {
 void inputMahasiswa(int n, int nim[], string nama[]) {
   for (int i = 0; i < n; i++) {
     cout << "Masukkan data mahasiswa ke-" << i + 1 << ":" << endl;
-    cout << "NIM[" << i << "]: ";
+    cout << "NIM: ";
     cin >> nim[i];
-    cout << "NAMA[" << i << "]: ";
+    cout << "NAMA: ";
     cin.ignore(); // Membersihkan karakter newline dalam buffer
     getline(cin, nama[i]);
   }
 }
 
 void urutkanMahasiswa(int n, int nim[], string nama[]) {
-  for (int i = 0; i < n; i++) {
-    for (int j = i + 1; j < n; j++) {
-      if (nim[i] < nim[j]) {
-        int tempNIM = nim[i];
-        nim[i] = nim[j];
-        nim[j] = tempNIM;
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      if (nim[j] > nim[j + 1]) {
+        // Tukar NIM
+        int tempNIM = nim[j];
+        nim[j] = nim[j + 1];
+        nim[j + 1] = tempNIM;
 
-        string tempNama = nama[i];
-        nama[i] = nama[j];
-        nama[j] = tempNama;
+        // Tukar Nama
+        string tempNama = nama[j];
+        nama[j] = nama[j + 1];
+        nama[j + 1] = tempNama;
       }
     }
   }

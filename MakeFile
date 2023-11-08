@@ -1,18 +1,39 @@
+# Nama program yang akan dijalankan
+PROGRAMS = alpro3 alpro4
+
 # Nama file sumber dan target
-SRC = C:\Dev\kuliah\semester_01\AlPro\Tugas\uts_bGanjil.cpp
-TARGET = C:\Dev\kuliah\semester_01\AlPro\Tugas\uts_bGanjil.exe
+alpro3_src = C:\Dev\kuliah\semester_01\AlPro\pertemuan3.cpp
+alpro3_target = C:\Dev\kuliah\execute\pertemuan3.exe
 
 # Perintah kompilasi dan opsi
 CC = g++
 
-# Aturan untuk membuat target
-$(TARGET): $(SRC)
-	$(CC) $(SRC) -o $(TARGET)
+# Target default jika tidak ada argumen yang diberikan
+default: help
+
+# Target untuk menjalankan program dengan argumen
+run: 
+	@echo "Usage: make run [program]"
+	@echo "Available programs: $(PROGRAMS)"
+
+run-%: 
+	@if [ -f $* ]; then \
+		./$*; \
+	else \
+		echo "Program '$*' not found"; \
+	fi
+
+# Aturan untuk membuat target alpro3
+alpro3: $(alpro3_target)
+
+$(alpro3_target): $(alpro3_src)
+	$(CC) $(alpro3_src) -o $(alpro3_target)
 
 # Aturan clean untuk menghapus file target
 clean:
-	rm -f $(TARGET)
+	rm -f $(alpro3_target)
 
-# Aturan run untuk menjalankan program
-run: $(TARGET)
-		$(TARGET)
+# Target untuk menampilkan bantuan
+help:
+	@echo "Usage: make run [program]"
+	@echo "Available programs: $(PROGRAMS)"
