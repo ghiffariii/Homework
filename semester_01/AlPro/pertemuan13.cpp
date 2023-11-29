@@ -49,7 +49,7 @@ void hapusData(Node **head) {
 
   if ((*head)->next == NULL) {
     *head = NULL;
-    cout << "Node terlah terhapus" << endl;
+    cout << "Node telah terhapus" << endl;
     return;
   }
 
@@ -89,6 +89,7 @@ void ubahData(Node **head) {
 int main() {
   struct Node *HEAD = NULL;
   int	       menu;
+
   while (menu != 9) {
     cout << "===MENU===" << endl;
     cout << "1. Tambah Data" << endl;
@@ -120,3 +121,4 @@ int main() {
     }
   }
   return 0;
+}
