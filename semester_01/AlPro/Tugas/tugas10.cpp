@@ -61,25 +61,7 @@ struct waktuParkir {
   int detik;
 };
 
-void hitungLamaParkir(waktuParkir waktuMasuk, waktuParkir waktuKeluar, waktuParkir &lamaParkir, int &biayaParkir) {
-  lamaParkir.jam = waktuKeluar.jam - waktuMasuk.jam;
-  lamaParkir.menit = waktuKeluar.menit - waktuMasuk.menit;
-  lamaParkir.detik = waktuKeluar.detik - waktuMasuk.detik;
-
-  if (lamaParkir.detik < 0) {
-    lamaParkir.detik += 60;
-    lamaParkir.menit--;
-  }
-  if (lamaParkir.menit < 0) {
-    lamaParkir.menit += 60;
-    lamaParkir.jam--;
-  }
-
-  if (lamaParkir.jam >= 1 || lamaParkir.menit > 0 || lamaParkir.detik > 0) {
-    biayaParkir = 3000;
-  }
-  biayaParkir += lamaParkir.jam * 3000;
-}
+int hitunf
 
 void hasilHitungParkir(waktuParkir waktuMasuk, waktuParkir waktuKeluar, waktuParkir lamaParkir, int biayaParkir) {
   cout << "\nWaktu Masuk   :         "<< waktuMasuk.jam << " : " << waktuMasuk.menit << " : " << waktuMasuk.detik << endl;
