@@ -14,9 +14,9 @@ struct waktuPinjam {
 struct barang {
   string kodeBuku;
   string judulBuku;
-  long long biaya;
   int jumlahKetersediaan;
   bool statusBuku;
+  long long biaya;
   waktuPinjam waktuPeminjaman;
   barang* next;
 };
@@ -147,8 +147,10 @@ void peminjamanBuku(barang** head) {
     return;
   }
 
-  cout << "Masukkan tanggal peminjaman: ";
-  cin >> tanggalPeminjaman.tahun >> tanggalPeminjaman.bulan >> tanggalPeminjaman.tanggal;
+  cout << "\nMasukkan tanggal peminjaman: " << endl;
+  cout << "Tahun   >> "; cin >> tanggalPeminjaman.tahun;
+  cout << "Bulan   >> "; cin >> tanggalPeminjaman.bulan;
+  cout << "Tanggal >> "; cin >> tanggalPeminjaman.tanggal;
 
   bukuDipinjam->jumlahKetersediaan--;
   bukuDipinjam->waktuPeminjaman = tanggalPeminjaman;
@@ -158,9 +160,11 @@ void peminjamanBuku(barang** head) {
 
 void pengembalianBuku(barang** head) {
   string kodeBuku;
-  waktuPinjam tanggalPeminjaman, tanggalPengembalian;
+  long long biaya;
+  waktuPinjam tanggalPengembalian;
 
-  cout << "Masukkan kode buku yang ingin dipinjam: "; cin >> kodeBuku;
+  cout << "Masukkan kode buku yang ingin dikembalikan: "; 
+  cin >> kodeBuku;
   barang* bukuDikembalikan = searchBarang(*head, kodeBuku);
 
   if (bukuDikembalikan == NULL) {
@@ -168,12 +172,31 @@ void pengembalianBuku(barang** head) {
     return;
   }
 
-  cout << "Masukkan tanggal pengembalian: ";
-  cin >> tanggalPengembalian.tahun >> tanggalPengembalian.bulan >> tanggalPengembalian.tanggal;
+  cout << "\nMasukkan tanggal peminjaman: " << endl;
+  cout << "Tahun   >> "; cin >> tanggalPengembalian.tahun;
+  cout << "Bulan   >> "; cin >> tanggalPengembalian.bulan;
+  cout << "Tanggal >> "; cin >> tanggalPengembalian.tanggal;
 
-  int selisih = selisihHari(tanggalPeminjaman, tanggalPengembalian);
+  int selisih = selisihHari(bukuDikembalikan->waktuPeminjaman, tanggalPengembalian);
 
-  cout << "Selisih hari antara kedua tanggal: " << selisih << " hari\n";
+  biaya = selisih*5000;
+
+  bukuDikembalikan->jumlahKetersediaan++;
+
+  cout << "\nBuku dengan kode " << kodeBuku << " berhasil dikembalikan." << endl;
+
+  cout << "\n#####################################################" << endl;
+
+  cout << "\nKode buku          : " << bukuDikembalikan->kodeBuku << endl;
+  cout << "Waktu peminjaman   : " << bukuDikembalikan->waktuPeminjaman.tahun << "-" << bukuDikembalikan->waktuPeminjaman.bulan << "-" << bukuDikembalikan->waktuPeminjaman.tanggal << endl;
+  cout << "Waktu pengembalian : " << tanggalPengembalian.tahun << "-" << tanggalPengembalian.bulan << "-" << tanggalPengembalian.tanggal << endl;
+  cout << "Lama peminjaman    : " << selisih << endl;
+  cout << "Biaya peminjaman   : Rp " << biaya << endl;
+
+  cout << "\n#####################################################" << endl;
+
+  getch();
+  system("cls");
 }
 
 barang* searchBarang(barang* head, string kodeBuku) {
