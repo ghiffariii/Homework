@@ -1,0 +1,78 @@
+# Load canceled
+# Compile of hafidzramadhan.vhd was successful.
+vsim -gui work.hafidzramadhan_ent
+# vsim -gui work.hafidzramadhan_ent 
+# Start time: 01:00:29 on Dec 13,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.hafidzramadhan_ent(hafidzramadhan_arch)
+add wave -position insertpoint sim:/hafidzramadhan_ent/*
+wave create -driver expectedOutput -pattern random -initialvalue U -period 50ps -random_type Uniform -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidzramadhan_ent/x
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver expectedOutput -pattern clock -initialvalue U -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/hafidzramadhan_ent/x
+# /hafidzramadhan_ent/x already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+noforce Edit:/hafidzramadhan_ent/x
+# ** UI-Msg (suppressible): (vsim-3561) No objects found matching 'Edit'.
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Edit:/hafidzramadhan_ent/x' not found.
+# 
+vsim -gui work.hafidzramadhan_ent(hafidzramadhan_arch)
+# End time: 01:03:27 on Dec 13,2023, Elapsed time: 0:02:58
+# Errors: 0, Warnings: 7
+# vsim -gui work.hafidzramadhan_ent(hafidzramadhan_arch) 
+# Start time: 01:03:27 on Dec 13,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.hafidzramadhan_ent(hafidzramadhan_arch)
+add wave -position insertpoint sim:/hafidzramadhan_ent/*
+add wave -position insertpoint  \
+sim:/hafidzramadhan_ent/x
+noforce sim:/hafidzramadhan_ent/x
+wave create -driver expectedOutput -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidzramadhan_ent/x
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+add wave -position insertpoint  \
+sim:/hafidzramadhan_ent/a
+wave create -driver freeze -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidzramadhan_ent/a
+wave create -driver freeze -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidzramadhan_ent/b
+wave create -driver freeze -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidzramadhan_ent/c
+run
+run
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Dev/kuliah/semester_01/SisDig/hafidzramadhan.do
+wave editwrite -file C:/Dev/kuliah/semester_01/SisDig/hafidzramadhan.do -append
+run -all
+# Compile of hafidzramadhan.vhd was successful.
+# Compile of hafidzramadhan.vhd was successful.
+# Compile of hafidzramadhan_tb.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of hafidzramadhan.vhd was successful.
+# Compile of hafidzramadhan_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.hafidz_tb
+# End time: 01:28:28 on Dec 13,2023, Elapsed time: 0:25:01
+# Errors: 0, Warnings: 5
+# vsim -gui work.hafidz_tb 
+# Start time: 01:28:28 on Dec 13,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.hafidz_tb(testbench)
+# Loading work.hafidz_ent(hafidz_arch)
+add wave -position insertpoint sim:/hafidz_tb/*
+wave create -pattern random -initialvalue {Not Logged} -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidz_tb/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# ** UI-Msg: (vish-4026) Value "not" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: Not Logged
+# 
+wave create -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidz_tb/a
+wave create -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidz_tb/b
+wave create -pattern random -initialvalue U -period 50ps -random_type Normal -seed 5 -starttime 0ps -endtime 1000ps sim:/hafidz_tb/c
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Dev/kuliah/semester_01/SisDig/hafidzramadhan_tb.do
+wave editwrite -file C:/Dev/kuliah/semester_01/SisDig/hafidzramadhan_tb.do -append
+# End time: 01:39:09 on Dec 13,2023, Elapsed time: 0:10:41
+# Errors: 0, Warnings: 1

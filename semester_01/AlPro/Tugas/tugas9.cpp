@@ -11,15 +11,15 @@ float jarak(float *ptr_x1, float *ptr_x2, float *ptr_y1, float *ptr_y2) {
 }
 
 void menu_1() {
-  float x1,x2,y1,y2; 
+  float x1,x2,y1,y2;
 
   cout << "Masukkan koordinat : " << endl;
   cout << "x1 : ";cin >>  x1;
   cout << "x2 : ";cin >>  x2;
   cout << "y1 : ";cin >>  y1;
   cout << "y2 : ";cin >>  y2;
-    
-  cout << "jarak  : " << jarak(&x1,&x2,&y1,&y2) << endl;    
+
+  cout << "jarak  : " << jarak(&x1,&x2,&y1,&y2) << endl;
 }
 
 void menu_2() {
@@ -59,7 +59,7 @@ void menu_3() {
       }
     }
   }
-    
+
   for(int i=0;i<n;i++) {
     int p=1;
     for(int j=i+1;j<n;j++) {
@@ -108,7 +108,7 @@ void  menu_4() {
       }
     }
   }
-    
+
   for(int i =0;i<n;i++) {
     cout << "NIM :" << nim[i];
     cout << "\tNAMA :" << nama[i];
@@ -127,7 +127,7 @@ int main(){
     cout << "4. Mengurutkan NIM  dan nama mahasiswa " << endl;
     cout << "5. Keluar" << endl;
     cout << "Silahkan pilih menu(1/2/3/4/5): ";cin >> menu;
-        
+
     if(menu == 1) {
       menu_1();
     } else if(menu == 2) {

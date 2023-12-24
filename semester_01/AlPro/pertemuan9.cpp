@@ -16,23 +16,23 @@ int main(){
 	int a = 10;
 	int *ptrA = &a;
 	int &c = a;
-	
+
 	cout<<"Nilai a: "<<a<<endl;
 	cout<<"Alamat a: "<<ptrA<<endl;
-	
+
 	cout<<"Nilai c: "<<c<<endl;
 	cout<<"Alamat c: "<<&c<<endl;
-	
+
 	c = 5;
-	
+
 	cout<<"Nilai a: "<<a<<endl;
 	cout<<"Alamat a: "<<ptrA<<endl;
-	
+
 	cout<<"Nilai c: "<<c<<endl;
 	cout<<"Alamat c: "<<&c<<endl;
-	
+
 	fb(10);
 	fungsiptr(ptrA);
-	
+
 	return 0;
 }

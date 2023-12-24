@@ -73,6 +73,18 @@ void displayDataBuku(barang* head) {
   system("cls");
 }
 
+void displayDataBukuTerbalik(barang* head) {
+  if (head == NULL) {
+    return;
+  }
+  displayDataBukuTerbalik(head->next);
+
+  cout << "\nKode buku    : " << head->kodeBuku << endl;
+  cout << "Judul buku   : " << head->judulBuku << endl;
+  cout << "Jumlah buku  : " << head->jumlahKetersediaan << endl;
+  cout << "Status       : " << (head->statusBuku ? "Tersedia" : "Tidak Tersedia") << endl;
+}
+
 void deleteDataBuku(barang** head) {
   if (*head == NULL) {
     cout << "\nData buku kosong." << endl;
@@ -133,7 +145,7 @@ void peminjamanBuku(barang** head) {
   string kodeBuku;
   waktuPinjam tanggalPeminjaman;
 
-  cout << "Masukkan kode buku yang ingin dipinjam: "; 
+  cout << "Masukkan kode buku yang ingin dipinjam: ";
   cin >> kodeBuku;
   barang* bukuDipinjam = searchBarang(*head, kodeBuku);
 
@@ -153,6 +165,9 @@ void peminjamanBuku(barang** head) {
   cout << "Tanggal >> "; cin >> tanggalPeminjaman.tanggal;
 
   bukuDipinjam->jumlahKetersediaan--;
+  if (bukuDipinjam->jumlahKetersediaan == 0) {
+    bukuDipinjam->statusBuku = false;
+  }
   bukuDipinjam->waktuPeminjaman = tanggalPeminjaman;
 
   cout << "Buku dengan kode " << kodeBuku << " berhasil dipinjam." << endl;
@@ -182,6 +197,9 @@ void pengembalianBuku(barang** head) {
   biaya = selisih*5000;
 
   bukuDikembalikan->jumlahKetersediaan++;
+  if (bukuDikembalikan->jumlahKetersediaan > 0) {
+    bukuDikembalikan->statusBuku = true;
+  }
 
   cout << "\nBuku dengan kode " << kodeBuku << " berhasil dikembalikan." << endl;
 
@@ -232,7 +250,8 @@ int main() {
     } else if (jawab == 2) {
       deleteDataBuku(&HEAD);
     } else if (jawab == 3) {
-      displayDataBuku(HEAD);
+      // displayDataBuku(HEAD);
+      displayDataBukuTerbalik(HEAD);
     } else if (jawab == 4) {
       peminjamanBuku(&HEAD);
     } else if (jawab == 5) {
